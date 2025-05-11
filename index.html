@@ -4,59 +4,82 @@
         <meta charset="utf-8">
         <title>Project: Event invite</title>
         <style>
-            body {
-		background-color: rgb(18, 18, 18);
-		color: white;
-		font-size: 1em;
-		margin: auto;
+        body {
+			background-color: rgb(18, 18, 18);
+			color: white;
+			font-size: 1em;
 		}
 	    .page {
-		border: 10px ridge white
+			border: 10px ridge white
 		}
 	    .head {
-		text-align: center;
-		font-family: 
+			text-align: center;
+			margin-top: 0px;
 		}
 	    .poster {
-		width: 30%;
-		margin-left: 67%;
-		border: 10px ridge green;
-		float: left;
+			width: 30%;
+			border: 10px ridge green;
+			float: right;
+			clear: both;
 		}
-	    .talk {
-		position: absolute;
-		border: 10px ridge orange;
-		width: 60%;
+	    .talk {	
+			border: 10px ridge orange;
+			width: 60%;
 		}
 		.body {
-		font-family: cursive;
-		text-align: center;
-		
-		}
-	    .talk.body{
-		margin-top: 87px;
+			font-family: cursive;
+			text-align: center;
+			font-optical-sizing: auto;
 		}
 		
+		.poster.body {
+			font-family: "Helvetica Neue", Arial;
+			font-size: 8px;
+		}
+		
+		
+	
 
         </style>
     </head>
     <body>
         
+		
     <h1 class="page head">Hello World!</h1>
-
-    <h2 class="poster head">Posters</h2>
-
+	
+			 <!-- Poster -->
+	
+	 <h2 class="poster head">Hello World!</h2>
+			 <!-- Poster1 -->
+    
+	
     <img class="poster" id="poster1" alt="welcome" src="https://github.com/Dhrubajyoti930/dhrubatweb/blob/main/welcome-poster.png?raw=true">
     <div class="poster body">
 	<h3>Welcome</h3>
     </div>       
-
+	
+			<!-- Poster2 -->
+    <img class="poster" id="poster1" alt="welcome" src="https://github.com/Dhrubajyoti930/dhrubatweb/blob/main/welcome-poster.png?raw=true">
+    <div class="poster body">
+	<h3>Read my theories</h3>
+    </div> 
+	
+			<!-- Talk -->
+            
     <h2 class="talk head">Hello Visitor!</h2>
+			<!-- Talk1 -->
     <div class="talk body">
-    
     <p>Hi, welcome to my webpage. It is a great honor to have you here and see my creations and thus be a part of my learning process. It motivates me to keep going.</p>
     </div>
-
+			<!-- Talk2 -->
+    <div class="talk body">
+    <p>I make theories.</p>
+    </div>
+			<!-- Talk3 -->
+	<div class="talk body">
+    <p>Join me on my theories.</p>
+    </div>
+	
 
 
 
