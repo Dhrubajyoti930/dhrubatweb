@@ -5,62 +5,105 @@
         <title>Project: Event invite</title>
         <link rel="stylesheet" href="styles.css">
 		<script src="p5.min.js"></script>
+		
     </head>
     <body>
+	
+		
+		
         
+		<button id="open-btn" onclick="openSideBar()">☰ Open Sidebar</button>
+			
+		<h1 class="page head">Hello World!</h1>
 		
-    <h1 class="page head">Hello World!</h1>
-	
-			 <!-- Poster -->
-	
-	 <h2 class="poster head">Hello World!</h2>
-			 <!-- Poster1 -->
-    
-	
-    <img class="poster" id="poster1" alt="welcome" src="https://github.com/Dhrubajyoti930/dhrubatweb/blob/main/welcome-poster.png?raw=true">
-    <div class="poster body">
-	<h3>Welcome</h3>
-    </div>       
-	
-			<!-- Poster2 -->
-    <img class="poster" id="poster1" alt="welcome" src="https://github.com/Dhrubajyoti930/dhrubatweb/blob/main/welcome-poster.png?raw=true">
-    <div class="poster body">
-	<h3>Read my theories</h3>
-    </div> 
-	
-			<!-- Talk -->
-            
-    <h2 class="talk head">Hello Visitor!</h2>
-			<!-- Talk1 -->
-    <div class="talk body">
-    <p>Hi, welcome to my webpage. It is a great honor to have you here and see my creations and thus be a part of my learning process. It motivates me to keep going.</p>
-    </div>
-			<!-- Talk2 -->
-    <div class="talk body">
-    <p>I make theories.</p>
-    </div>
-			<!-- Talk3 -->
-	<div class="talk body">
-    <p>Join me on my theories.</p>
-    </div>
-	<script>
-		var c =0;
-		function setup(){
-			createCanvas(windowWidth, 10, 45, 0);
-			background(255,255,255);
-		}
-		function draw(){
-			background(255,255,255);
-			fill(0, 100, 220);
-			rect(c,0, 10, 10);
-			text("      this is in development phase ;)", c, 10);
-			c += 2;
-			if(c >= windowWidth){
-				c = 0;
+				 <!-- Poster -->
+		
+		<h2 class="poster head">Hello World!</h2>
+				 <!-- Poster1 -->
+		
+		
+		<img class="poster" id="poster1" alt="welcome" src="https://github.com/Dhrubajyoti930/dhrubatweb/blob/main/welcome-poster.png?raw=true">
+		<div class="poster body">
+			<h3>Welcome</h3>
+		</div>       
+		
+				<!-- Poster2 -->
+		<img class="poster" id="poster1" alt="welcome" src="https://github.com/Dhrubajyoti930/dhrubatweb/blob/main/welcome-poster.png?raw=true">
+		<div class="poster body">
+			<h3>Read my theories</h3>
+		</div> 
+		
+				<!-- Talk -->
+				
+		<h2 class="talk head">Hello Visitor!</h2>
+				<!-- Talk1 -->
+		<div class="talk body">
+			<p>Hi, welcome to my webpage. It is a great honor to have you here and see my creations and thus be a part of my learning process. It motivates me to keep going.</p>
+		</div>
+				<!-- Talk2 -->
+		<div class="talk body">
+			<p>I make theories.</p>
+		</div>
+				<!-- Talk3 -->
+		<div class="talk body">
+			<p>Join me on my theories.</p>
+		</div>
+		
+		
+		
+		
+		<canvas id="side-bar" ></canvas>
+		
+		
+		
+		
+		
+		
+		<script>
+			var c =-200;
+			function setup(){
+				createCanvas(windowWidth-15, 10, 4, 0);
+				background(255,255,255);
 			}
-		}
+			function draw(){
+				background(255,255,255);
+				fill(0, 100, 220);
+				rect(c,0, 10, 10);
+				text("      this is in development phase ;)", c, 10);
+				c += 2;
+				if(c >= windowWidth){
+					c = -200;
+				}
+			}
+			
+		</script>
 		
-	</script>
+		  <script>
+	const button = document.getElementById('open-btn');
+    const canvas = document.getElementById("side-bar");
+    const ctx = canvas.getContext("2d");
+	var open = 0;
+    
+    ctx.fillStyle = "rgb(30, 30, 30)";
+	
+	function openSideBar(){
+	
+		if (!open){
+			ctx.fillRect(0, 0, windowWidth, windowHeight);
+			canvas.style.height = "70%";
+			canvas.style.width = "30%";
+			button.innerText = "☰ Close Sidebar";
+			open = 1;
+		}else{
+			canvas.style.height = "0%";
+			canvas.style.width = "0%";
+			button.innerText = "☰ Open Sidebar";
+			
+			open = 0;
+		}
+	}
+	
+		  </script>
 
     </body>
 </html>
