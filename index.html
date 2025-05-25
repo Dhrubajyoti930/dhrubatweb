@@ -3,44 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Project: Event invite</title>
-        <style>
-        body {
-			background-color: rgb(18, 18, 18);
-			color: white;
-			font-size: 1em;
-		}
-	    .page {
-			border: 10px ridge white
-		}
-	    .head {
-			text-align: center;
-			margin-top: 0px;
-		}
-	    .poster {
-			width: 30%;
-			border: 10px ridge green;
-			float: right;
-			clear: both;
-		}
-	    .talk {	
-			border: 10px ridge orange;
-			width: 60%;
-		}
-		.body {
-			font-family: cursive;
-			text-align: center;
-			font-optical-sizing: auto;
-		}
-		
-		.poster.body {
-			font-family: "Helvetica Neue", Arial;
-			font-size: 8px;
-		}
-		
-		
-	
-
-        </style>
+        <link rel="stylesheet" href="styles.css">
+		<script src="p5.min.js"></script>
     </head>
     <body>
         
@@ -79,9 +43,24 @@
 	<div class="talk body">
     <p>Join me on my theories.</p>
     </div>
-	
-
-
+	<script>
+		var c =0;
+		function setup(){
+			createCanvas(windowWidth, 10, 45, 0);
+			background(255,255,255);
+		}
+		function draw(){
+			background(255,255,255);
+			fill(0, 100, 220);
+			rect(c,0, 10, 10);
+			text("      this is in development phase ;)", c, 10);
+			c += 2;
+			if(c >= windowWidth){
+				c = 0;
+			}
+		}
+		
+	</script>
 
     </body>
 </html>
